@@ -1,0 +1,43 @@
+body{
+    background-color: #f3effa;
+    overflow: hidden;
+    margin: 0;
+}
+
+#imgcontainer
+{
+    height: 90%;
+    width: fit-content;
+    margin: auto;
+    
+
+}
+
+svg{
+    position: absolute;
+    height: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+div#footer
+{
+    background-color: blue;
+    position: absolute;
+    width: 100vw;
+    bottom: 0%;
+
+}
+
+p.footer
+{
+    color: white;
+    text-align: center;
+    font-size: small;
+    margin: 0.3em;
+}
+
+h1
+{
+    text-align: center;
+}
