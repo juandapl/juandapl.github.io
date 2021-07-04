@@ -69,7 +69,29 @@ h1
 #torso-movable, #torso-movable-w
 {
     transition: 1.3s;
+    
 }
+
+#torso-movable.notanimated
+{
+    animation: tease 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#torso-movable-w.notanimated
+{
+    animation: tease2 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#phone
+{
+    /* animation: phonevibrate 3s;
+    animation-iteration-count: infinite; */
+}
+
 .goleft
 {
     transform: translateX(-70%);
@@ -94,5 +116,54 @@ circle
 circle:hover{
     transform: scale(1.15);
 }
+
+/* teasers reveal a bit of purple behind the clickables/hoverables */
+@keyframes tease
+{
+    from
+    {
+        
+    }
+    to
+    {
+        transform: translateX(-5%)
+    }
+}
+
+@keyframes tease2
+{
+    from
+    {
+        
+    }
+    to
+    {
+        transform: translateX(5%)
+    }
+}
+
+/* @keyframes phonevibrate
+{
+    0%
+    {
+        
+    }
+    3%
+    {
+        transform: translate(1%,1%)
+    }
+    50%
+    {
+
+    }
+    97%
+    {
+        transform: translate(-1%,-1%);
+    }
+    100%
+    {
+
+    }
+} */
 
 
