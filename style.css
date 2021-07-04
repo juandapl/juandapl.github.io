@@ -20,9 +20,30 @@ svg{
     transform: translateX(-50%);
 }
 
-div#footer
+div#momo, div#footer
 {
     background-color: blue;
+}
+
+div#momo
+{
+    position: absolute;
+    right: 30%;
+    bottom: 3em;
+}
+
+span#momo
+{
+    text-decoration: underline;
+}
+
+.hidden
+{
+    display: none;
+}
+
+div#footer
+{
     position: absolute;
     width: 100vw;
     bottom: 0%;
@@ -35,9 +56,43 @@ p.footer
     text-align: center;
     font-size: small;
     margin: 0.3em;
+    font-family: "glacial_indifferenceregular", sans-serif;
 }
 
 h1
 {
     text-align: center;
+    font-family: "glacial_indifferenceregular", sans-serif;
 }
+
+/* making the divs on torso move out on hover */
+#torso-movable, #torso-movable-w
+{
+    transition: 1.3s;
+}
+.goleft
+{
+    transform: translateX(-70%);
+}
+
+.goright
+{
+    transform: translateX(70%);
+}
+
+/* background of animated bit */
+.cls-7
+{
+    background-color: blueviolet;
+}
+
+circle
+{
+    transition: 0.4s;
+}
+
+circle:hover{
+    transform: scale(1.15);
+}
+
+
