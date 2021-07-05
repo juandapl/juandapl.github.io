@@ -66,7 +66,7 @@ h1
 }
 
 /* making the divs on torso move out on hover */
-#torso-movable, #torso-movable-w
+#torso-movable, #torso-movable-w, #facemovable, #facemovable2, #movablephone
 {
     transition: 1.3s;
     
@@ -86,6 +86,27 @@ h1
     animation-direction: alternate;
 }
 
+#facemovable.notanimated
+{
+    animation: tease3 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+#facemovable2.notanimated{
+    animation: tease4 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#movablephone.notanimated
+{
+    animation: tease5 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
 #phone
 {
     /* animation: phonevibrate 3s;
@@ -100,6 +121,21 @@ h1
 .goright
 {
     transform: translateX(70%);
+}
+
+.goleft2
+{
+    transform: translateX(-10%);
+}
+
+.goright2
+{
+    transform: translateX(10%);
+}
+
+.godown
+{
+    transform: translate(-2%,6%)
 }
 
 /* background of animated bit */
@@ -126,7 +162,7 @@ circle:hover{
     }
     to
     {
-        transform: translateX(-5%)
+        transform: translateX(-2.5%)
     }
 }
 
@@ -138,32 +174,48 @@ circle:hover{
     }
     to
     {
-        transform: translateX(5%)
+        transform: translateX(2.5%)
     }
 }
 
-/* @keyframes phonevibrate
+/* face teaser */
+
+@keyframes tease3
 {
-    0%
+    from
     {
         
     }
-    3%
+    to
     {
-        transform: translate(1%,1%)
+        transform: translateX(-0.5%)
     }
-    50%
-    {
+}
 
-    }
-    97%
+@keyframes tease4
+{
+    from
     {
-        transform: translate(-1%,-1%);
+        
     }
-    100%
+    to
     {
+        transform: translateX(0.5%)
+    }
+}
 
+/* phone teaser */
+@keyframes tease5
+{
+    from
+    {
+        
     }
-} */
+    to
+    {
+        transform: translate(-0.3%,1%)
+    }
+}
+
 
 

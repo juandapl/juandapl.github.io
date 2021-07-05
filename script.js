@@ -1,10 +1,12 @@
-window.openinganimation = false;
+window.torsoanimation = false;
+window.headanimation = false;
+window.phoneanimation = false;
 
 function openChest()
 {
-    if(!window.openinganimation)
+    if(!window.torsoanimation)
     {
-        window.openinganimation = true;
+        window.torsoanimation = true;
         $("#torso-movable").removeClass("notanimated");
         $("#torso-movable-w").removeClass("notanimated");
         setTimeout(function() {
@@ -23,12 +25,68 @@ function closeChest()
     $("#torso-movable-w").removeClass("goright");
     $("#torso-movable").addClass("notanimated");
     $("#torso-movable-w").addClass("notanimated");
-    window.openinganimation = false;
+    window.torsoanimation = false;
+}
+
+function openHead()
+{
+    if(!window.headanimation)
+    {
+        window.headanimation = true;
+        $("#facemovable").removeClass("notanimated");
+        $("#facemovable2").removeClass("notanimated");
+        setTimeout(function() {
+            $("#facemovable").addClass("goleft2");
+            $("#facemovable2").addClass("goright2");
+        }, 250)
+
+        
+        setTimeout(closeHead, 4000)
+    }
+}
+
+function closeHead()
+{
+    $("#facemovable").removeClass("goleft2");
+    $("#facemovable2").removeClass("goright2");
+    $("#facemovable").addClass("notanimated");
+    $("#facemovable2").addClass("notanimated");
+    window.headanimation = false;
+}
+
+function openPhone()
+{
+    if(!window.phoneanimation)
+    {
+        window.phoneanimation = true;
+        $("#movablephone").removeClass("notanimated");
+        setTimeout(function() {
+            $("#movablephone").addClass("godown");
+        }, 250)
+
+        
+        setTimeout(closePhone, 4000)
+    }
+}
+
+function closePhone()
+{
+    $("#movablephone").removeClass("godown");
+    $("#movablephone").addClass("notanimated");
+    window.phoneanimation = false;
 }
 
 
 $("#movables").hover(
     openChest
+);
+
+$("#face").hover(
+    openHead
+);
+
+$("#phone").hover(
+    openPhone
 );
 
 $("span#momo").hover(
