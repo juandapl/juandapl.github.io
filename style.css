@@ -32,7 +32,7 @@ div#momo, div.footer
     text-align: center;
     font-size: small;
     font-family: "glacial_indifferenceregular", sans-serif;
-    z-index: 9999;
+    z-index: 10000;
 }
 
 div#momo
@@ -291,6 +291,7 @@ ul{
     right: 1.5em;
     top: 0;
     cursor: pointer;
+    z-index: 10001;
 }
 
 ul#contact
