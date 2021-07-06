@@ -4,18 +4,23 @@ body{
     margin: 0;
 }
 
+section{
+    height: 100vh;
+}
+
+
+
 #imgcontainer
 {
     height: 90%;
-    width: fit-content;
     margin: auto;
-    
+    position: relative;
 
 }
 
 svg{
     position: absolute;
-    height: 90%;
+    height: 100%;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -63,6 +68,11 @@ h1
 {
     text-align: center;
     font-family: "glacial_indifferenceregular", sans-serif;
+}
+
+text#portfolio,text#about,text#contact
+{
+    cursor: pointer;
 }
 
 /* making the divs on torso move out on hover */
@@ -217,5 +227,93 @@ circle:hover{
     }
 }
 
+/* actual content */
 
 
+.contentwrapper
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.sectiontitle
+{
+    color: white;
+    text-align: left;
+}
+
+.content{
+    position: relative;
+    color: white;
+    background-color: rgba(138, 43, 226, 0.9);
+    padding: 1.5em;
+    max-width: 850px;
+    max-height: 85%;
+    overflow-y: auto;
+}
+
+p,ul,h2
+{
+    font-family: "glacial_indifferenceregular";
+}
+
+ul{
+    list-style-type: none;
+}
+
+.overlay
+{
+    position: absolute;
+    left:0%;
+    top:0%;
+    height: 100vh;
+    width: 100vw;
+}
+
+.close
+{
+    position: absolute;
+    right: 1.5em;
+    top: 0;
+    cursor: pointer;
+}
+
+ul#contact
+{
+    padding: 0;
+}
+
+a
+{
+    color: inherit;
+}
+
+u
+{
+    position: relative;
+}
+
+.over
+{
+    position: absolute;
+    top: -100%;
+    right: -16.3em;
+    width: 15em;
+    z-index: 9999;
+    padding: 0.3em;
+    padding-bottom: 1em;
+    background-color: white;
+}
+
+img
+{
+    width:100%;
+}
+
+.project
+{
+    height: 60vh;
+}

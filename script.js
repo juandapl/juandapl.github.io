@@ -89,16 +89,54 @@ $("#phone").hover(
     openPhone
 );
 
+$("#movables").click(
+    openChest
+);
+
+$("#face").click(
+    openHead
+);
+
+$("#phone").click(
+    openPhone
+);
+
+$("#about").click(
+    function(){$("div#about").removeClass("hidden");}
+);
+$("#aboutclose").click(
+    function(){$("div#about").addClass("hidden");}
+);
+
+$("#portfolio").click(
+    function(){console.log("yeah");}
+);
+
+$("#contact").click(
+    function(){$("div#contact").removeClass("hidden");}
+);
+$("#contactclose").click(
+    function(){$("div#contact").addClass("hidden");}
+);
+
+
 $("span#momo").hover(
     function()
     {
         $("div#momo").toggleClass("hidden");
     }
-)
+);
 
 $("span#momo").click(
     function()
     {
         $("div#momo").toggleClass("hidden");
     }
-)
+);
+
+$("u").hover(
+    function()
+    {
+        $(this).find(".over").toggleClass("hidden");
+    }
+);
