@@ -259,6 +259,7 @@ circle:hover{
     color: white;
     background-color: rgba(138, 43, 226, 0.9);
     padding: 1.5em;
+    padding-top: 0;
     max-width: 850px;
     max-height: 85%;
     overflow-y: auto;
@@ -284,7 +285,9 @@ ul{
 
 .close
 {
-    position: absolute;
+    background-color: blueviolet;
+    padding: 0.5em;
+    position: fixed;
     right: 1.5em;
     top: 0;
     cursor: pointer;
@@ -337,6 +340,8 @@ img
     padding: 1.3em;
     margin-left: -1.5em;
     margin-right: -1.5em;
+    background-position: center;
+    background-size: cover;
 }
 
 .links
@@ -351,23 +356,31 @@ img
 #tie
 {
     background-image: url("projectfiles/tie.png");
-    background-position: center;
-    background-size: cover;
 }
 
 #crown
 {
-
+    background-image: url("projectfiles/crown.png");
 }
 
 #dinner
 {
-
+    background-image: url("projectfiles/cat.png");
 }
 
 #mff
 {
+    background-image: url("projectfiles/30mff.png");
+}
 
+#potsch
+{
+    background-image: url("projectfiles/game.png");
+}
+
+#workmate
+{
+    background-image: url("projectfiles/workmate.png");
 }
 
 /* responsible for the black filter that makes text readable in the portfolio */
@@ -386,4 +399,14 @@ img
 .above
 {
     z-index: 9999;
+}
+
+.deactivated
+{
+    color: gray;
+}
+
+.clicky
+{
+    cursor: pointer;
 }

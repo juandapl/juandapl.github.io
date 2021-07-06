@@ -143,3 +143,22 @@ $("u").hover(
         $(this).find(".over").toggleClass("hidden");
     }
 );
+
+$("#2021").click(
+    function()
+    {
+        $("#2021").toggleClass("deactivated");
+        $(".y2021").toggleClass("hidden");
+        $(".y2021").toggleClass("project");
+    }
+);
+
+$("#2020").click
+(
+    function()
+    {
+        $("#2020").toggleClass("deactivated");
+        $(".y2020").toggleClass("hidden");
+        $(".y2020").toggleClass("project");
+    }
+);
