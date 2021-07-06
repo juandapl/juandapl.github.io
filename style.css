@@ -25,9 +25,14 @@ svg{
     transform: translateX(-50%);
 }
 
-div#momo, div#footer
+div#momo, div.footer
 {
     background-color: blue;
+    color: white;
+    text-align: center;
+    font-size: small;
+    font-family: "glacial_indifferenceregular", sans-serif;
+    z-index: 9999;
 }
 
 div#momo
@@ -47,12 +52,12 @@ span#momo
     display: none;
 }
 
-div#footer
+div.footer
 {
     position: absolute;
-    width: 100vw;
+    width: 100%;
     bottom: 0%;
-
+    left: 0%;
 }
 
 p.footer
@@ -64,9 +69,13 @@ p.footer
     font-family: "glacial_indifferenceregular", sans-serif;
 }
 
-h1
+h1.title
 {
     text-align: center;
+}
+
+h1
+{
     font-family: "glacial_indifferenceregular", sans-serif;
 }
 
@@ -255,7 +264,7 @@ circle:hover{
     overflow-y: auto;
 }
 
-p,ul,h2
+p,ul,h2,span
 {
     font-family: "glacial_indifferenceregular";
 }
@@ -313,7 +322,68 @@ img
     width:100%;
 }
 
+#portfolio
+{
+    padding: 0;
+}
+
 .project
 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     height: 60vh;
+    padding: 1.3em;
+    margin-left: -1.5em;
+    margin-right: -1.5em;
+}
+
+.links
+{
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+}
+
+/* background images */
+
+#tie
+{
+    background-image: url("projectfiles/tie.png");
+    background-position: center;
+    background-size: cover;
+}
+
+#crown
+{
+
+}
+
+#dinner
+{
+
+}
+
+#mff
+{
+
+}
+
+/* responsible for the black filter that makes text readable in the portfolio */
+.project::after
+{
+    content:"";
+    background-color: black;
+    opacity: 0.7;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+}
+
+.above
+{
+    z-index: 9999;
 }

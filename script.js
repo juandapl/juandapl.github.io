@@ -109,7 +109,10 @@ $("#aboutclose").click(
 );
 
 $("#portfolio").click(
-    function(){console.log("yeah");}
+    function(){$("div#portfolio").removeClass("hidden");}
+);
+$("#portfolioclose").click(
+    function(){$("div#portfolio").addClass("hidden");}
 );
 
 $("#contact").click(
