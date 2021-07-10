@@ -181,7 +181,7 @@ circle:hover{
     }
     to
     {
-        transform: translateX(-2.5%)
+        transform: translateX(-5%)
     }
 }
 
@@ -193,7 +193,7 @@ circle:hover{
     }
     to
     {
-        transform: translateX(2.5%)
+        transform: translateX(5%)
     }
 }
 
@@ -207,7 +207,7 @@ circle:hover{
     }
     to
     {
-        transform: translateX(-0.5%)
+        transform: translateX(-1%)
     }
 }
 
@@ -219,7 +219,7 @@ circle:hover{
     }
     to
     {
-        transform: translateX(0.5%)
+        transform: translateX(1%)
     }
 }
 
