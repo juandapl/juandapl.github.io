@@ -1,6 +1,7 @@
 window.torsoanimation = false;
 window.headanimation = false;
 window.phoneanimation = false;
+window.titleNumber = 0;
 
 function openChest()
 {
@@ -153,8 +154,7 @@ $("#2021").click(
     }
 );
 
-$("#2020").click
-(
+$("#2020").click(
     function()
     {
         $("#2020").toggleClass("deactivated");
@@ -162,3 +162,13 @@ $("#2020").click
         $(".y2020").toggleClass("project");
     }
 );
+
+let titles = ["juan piñeros liberato","programmer?","designer?","aspiring linguist?","too old for pro tennis?","firefighter?","math nerd?","\"most likely to win nobel prize\"?"];
+
+function changeTitle()
+{
+    titleNumber = (titleNumber + 1) % 8;
+    document.title = titles[titleNumber];
+}
+
+var interval = window.setInterval(changeTitle, 1000);
