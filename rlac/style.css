@@ -1,0 +1,65 @@
+body
+{
+    background-color: #1d1d1d;
+}
+
+@media (max-width: 700px) {
+    #content
+    {
+        width: 98%;
+    }
+}
+
+@media (min-width: 701px) {
+    #content
+    {
+        width: 80%;
+    }
+}
+
+#content
+{
+    margin: auto
+}
+
+#navbar
+{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.element
+{
+    font-family: "glacial_indifferenceregular", sans-serif;
+    color: white;
+    text-decoration: none;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.title
+{
+    font-family: "glacial_indifferenceregular", sans-serif;
+    font-size: 3em;
+    color: white;
+    margin: auto;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    text-align: center;
+}
+
+#body
+{
+    margin-top: 1.3em;
+}
+
+.bodytext
+{
+    font-family: "glacial_indifferenceregular", sans-serif;
+    color: white;
+    margin: auto;
+}
