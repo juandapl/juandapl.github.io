@@ -34,6 +34,7 @@ body
     font-family: "glacial_indifferenceregular", sans-serif;
     color: white;
     text-decoration: none;
+    padding: 0 1em;
 }
 
 a{
@@ -62,4 +63,17 @@ a{
     font-family: "glacial_indifferenceregular", sans-serif;
     color: white;
     margin: auto;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content
+{
+    display: none;
+    background-color: #1d1d1d;
+    position: absolute;
+    padding: 0.6em;
+    min-width: 160px;
 }
