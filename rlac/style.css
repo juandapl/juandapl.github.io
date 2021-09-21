@@ -32,14 +32,25 @@ body
 .element
 {
     font-family: "glacial_indifferenceregular", sans-serif;
+    font-size: 1.6em;
     color: white;
     text-decoration: none;
     padding: 0 1em;
 }
 
-a{
+.element>a{
     color: white;
     text-decoration: none;
+}
+
+a{
+    color: white;
+    text-decoration: underline;
+}
+
+a:hover
+{
+    color: lightblue;
 }
 
 .title
@@ -60,9 +71,11 @@ a{
 
 .bodytext
 {
-    font-family: "glacial_indifferenceregular", sans-serif;
+    font-family: 'Assistant', sans-serif;
+    font-size: 1.3em;
     color: white;
     margin: auto;
+    text-align: justify;
 }
 
 .dropdown:hover .dropdown-content {
@@ -76,4 +89,53 @@ a{
     position: absolute;
     padding: 0.6em;
     min-width: 160px;
+}
+
+.imgcontainer
+{
+    display: flex;
+    max-width: 100%;
+    justify-content: space-evenly;
+    padding: 2em;
+}
+
+.imgcell
+{
+    width: auto;
+    height: 50vh;
+}
+
+.landscape
+{
+    height: 20vh;
+}
+
+
+img{
+    object-fit: cover;
+    width: auto;
+    height: 100%;
+}
+
+.description
+{
+    font-style: italic; text-align: center;
+}
+.ranking1
+{
+    font-family: "glacial_indifferenceregular", sans-serif;
+    font-size: 2em;
+    color: lightblue;
+}
+
+.ranking2
+{
+    font-family: "glacial_indifferenceregular", sans-serif;
+    font-size: 2em;
+    color: lightcoral;
+}
+
+.ranking2>.ranking1
+{
+    font-size: inherit;
 }

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../fonts/gi/stylesheet.css">
+    <script src="jquery-3.6.0.min.js"></script>
+    <link rel="shortcut icon" type="image/jpg" href="favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <div id="content">
+        <div id="header">
+            <p class="title">Juan's RLAC Notes</p>
+            <div id="navbar">
+                <p class="element"><a href="index.html">home</a></p>
+
+                <div class="dropdown">
+                    <div>
+                        <p class="element">reading responses</p>
+                    </div>
+                    <div class="dropdown-content">
+                        <p class="element"><a href="response1.html">response 1</a></p>
+                    </div>
+                </div>
+                <p class="element"><a href="assignments.html">assignments</a></p>
+                <p class="element"><a href="http://juandapl.github.io">juan's page</a></p>
+            </div>
+            <hr>
+        </div>
+        <div id="body">
+            <p class="bodytext">This written response is the result of an exploration of a corpus of <a
+                    href="https://github.com/amardeepmsingh/Colonial-South-Asian-Literature">South
+                    Asian colonial literature (by Amardeep Singh)</a> using the corpus analysis tool <a
+                    href="https://www.laurenceanthony.net/software/antconc/">AntConc.</a> It is also a reflection on
+                the ideas of nation, race, and caste of two authors on opposite sides of the Indian colonial ethnic
+                spectrum. It is also, if the reader allows a bit of speculation and overinduction, a glimpse at the
+                different thematic possibilities available from the same land to people of separate contexts.</p>
+
+            <br>
+            <p class="bodytext">
+                Out of the numerous authors contained in the corpus, I thought it would be a good idea to
+                contrast the most common topics and choices of authors on both sides of the colonial divide: the
+                coloniser and the colonised. Because of their relative prominence, I chose to contrast <a
+                    href="https://www.poetryfoundation.org/poets/rabindranath-tagore">Rabindranath
+                    Tagore</a> and <a href="https://www.poetryfoundation.org/poets/rudyard-kipling">Rudyard Kipling</a>
+                in order to explore the relationship between the context
+                of the authors and the way they describe the composition of society and their characters’ roles in it.
+
+            </p>
+
+            <div class="imgcontainer">
+                <div class="imgcell">
+                    <img src="kp.jpg">
+                </div>
+                <div class="imgcell">
+                    <img src="tg.jpg">
+                </div>
+
+            </div>
+            <p class="bodytext description">
+                Kipling (left) and Tagore (right)
+            </p>
+
+            <br>
+            <p class="bodytext">
+                My first stop in this analysis was AntConc’s word list tool. I used <a
+                    href="https://gist.github.com/sebleier/554280">this stoplist from NLTK</a> to
+                filter most function words. The first uncommon words to appear in the top of the wordlist (aside from
+                the names of the main characters) are in both authors the titles with which the characters are
+                addressed. In the case of Kipling, this is the word “sahib”, <a
+                    href="https://en.wikipedia.org/wiki/Sahib">a word used in colonial India to address
+                    high-ranking English officials or landowners</a>, while in the case of Tagore it is “brahmo”, <a
+                    href="https://en.wikipedia.org/wiki/Brahmo">the title
+                    given to the members of Tagore’s Hindu sect</a>, or “babu”, a title for elders.
+            </p>
+
+            <div class="imgcontainer">
+                <div class="imgcell">
+                    <img src="assets/sahib.png">
+                </div>
+                <div class="imgcell">
+                    <img src="assets/brahmo.png">
+                </div>
+
+            </div>
+            <p class="bodytext description">
+                Word count rankings for "sahib" and "brahmo".
+            </p>
+
+            <br>
+            <p class="bodytext">
+                The prominence of Sahibs and Brahmos can be confirmed by using AntConc’s Keyword List tool, which
+                compares the word frequencies of a corpus to another reference corpus. For each of the two authors, I
+                used the works of the other as reference corpus, enabling me to see the words frequently used by one
+                author but not by the other.
+            </p>
+
+            <div class="imgcontainer">
+                <div class="imgcell landscape">
+                    <img src="assets/keysah.png">
+                </div>
+                <div class="imgcell landscape">
+                    <img src="assets/keybra.png">
+                </div>
+
+            </div>
+            <p class="bodytext description">
+                Keyword rankings for "sahib" and "brahmo".
+            </p>
+
+            <br>
+            <p class="bodytext">
+                With this information, we can hypothesise that a good amount of the characters in both authors’ books
+                are based on people of their ethnicity and social status. We can also look at the word clusters that
+                contain “sahib” and “brahmo” and see that, in fact, we can obtain a list of main characters. We can also
+                see, using these results and the Word List tool, what proportion of the main characters in both authors
+                belong to these groups.
+            </p>
+
+            <div class="imgcontainer">
+                <div>
+                    <p class="ranking1">
+                        1. Binoy <br>
+                        2. Gora <br>
+                        3. Sucharita <br>
+                        5. Lolita <br>
+                        6. Paresh <br>
+                        8. Haran <br>
+                        9. Satish
+                    <p class="bodytext description">
+                        Keyword rankings for (presumpt) Tagore main characters. </p>
+                </div>
+                <div>
+                    <p class="ranking2">
+                        <span class="ranking1">5. Binoy </span> <br>
+                        <span class="ranking1">6. Gora </span> <br>
+                        <span class="ranking1">15. Haran </span> <br>
+                        <span class="ranking1">21. Lolita </span> <br>
+                        ...
+                    <p class="bodytext description">
+                        Characters collocated with "brahm*" (brahmo, brahmin, brahma...) in Kipling's works
+                    </p>
+                </div>
+            </div>
+
+            <br>
+            <p class="bodytext">
+                We can transpose the top keywords of each author (usually the names of characters) with the top
+                collocates for “sahib” and “brahmo” in order to do this. As it can be seen above, four of
+                Tagore’s main characters appear associated with the title “brahmo”, a fact from which we can
+                hypothesise that some of Tagore's main characters are from the same sector of society as him, or
+                interact with people from it.
+            </p>
+
+            <div class="imgcontainer">
+                <div>
+                    <p class="ranking1">
+                        3. Kim <br>
+                        5. Tarvin <br>
+                        7. Mowgli <br>
+                        19. Lama <br>
+                        22. Kate <br>
+                        30. Colonel <br>
+                        43. Bagheera
+                    <p class="bodytext description">
+                        Keyword rankings for (presumpt) Kipling main characters.
+                    </p>
+                </div>
+                <div>
+                    <p class="ranking2">
+                        <span class="ranking1">2. Tarvin</span> <br>
+                        3. Lurgan <br>
+                        6. Petersen <br>
+                        8. Colonel <br>
+                        16. Yunkum <br>
+                        24. Creighton <br>
+                        <span class="ranking1">35. Kim</span>
+                    <p class="bodytext description">
+                        Characters collocated with "sahib" in Kipling's works
+                    </p>
+                </div>
+            </div>
+
+            <br>
+            <p class="bodytext">
+                In the case of Kipling, although only two of the main characters are associated with the title
+                of “sahib” (Tarvin and Kim), “sahib” is still collocated to many proper names of what could be
+                supporting characters, which could mean that many of Kipling’s characters are based on other English
+                people in India.
+            </p>
+
+            <br>
+            <p class="bodytext">
+                A deeper look at the keywords tool led me to find more words used to categorise people. This could give
+                us an insight on how both authors think society is divided. To illustrate the differences between the
+                two authors in regards to this, I also calculated the ratio of use of the words they use for these
+                descriptions.
+            </p>
+
+            <div class="imgcontainer">
+                <div>
+                    <p class="ranking1">
+                        12. white <br>
+                        24. black <br>
+                        44. native 
+                    <p class="bodytext description">
+                        Keyword rankings for Kipling presumpt racial descriptors.
+                    </p>
+                </div>
+                <div>
+                    <p class="ranking2">
+                        is used 8.3x more frequently in Kipling<br>
+                        is used 7.6x<br>
+                        is used 70.9x<br>   
+                    </p>
+                </div>
+            </div>
+
+            <br>
+            <p class="bodytext">
+                For example, the words “black” (#24), “white” (#12), and “native” (#44), according to AntConc’s keyword
+                tool, are used way more frequently by Kipling than by Tagore, and are amongst the only top keywords that
+                aren’t either names of characters or titles.
+            </p>
+
+            <div class="imgcontainer">
+                <div class="imgcell landscape">
+                    <img src="assets/white.png">
+                </div>
+                <div class="imgcell landscape">
+                    <img src="assets/balack.png">
+                </div>
+                <div class="imgcell landscape">
+                    <img src="assets/native.png">
+                </div>
+
+            </div>
+            <p class="bodytext description">
+                Clusters related to "black", "white", and "native"
+            </p>
+
+
+            <br>
+            <p class="bodytext">
+                Running the cluster tool on these words backs up our hypothesis: in the most frequent clusters
+                containing them they are used as adjectives to describe skin colour or origin. Using the frequencies of these
+                descriptors we can attempt to make an ethnic map of the people mentioned in Kipling’s work:
+            </p>
+
+            <br>
+            <p class="bodytext">
+                In Tagore, on the other hand, these descriptors are rarely used. This could mean that, in his work,
+                society is divided in a different way. Running the keywords tool on Tagore’s works gives us a completely
+                different classification of society: showing us titles that denote distinctions within what in Kipling
+                is just “the natives”: “babu” (#4), “brahmo” (#14), and “rani” (#38) appear along the character names in
+                the top of the list of keywords, which bears barely any mention of adjectives for the distinct ethnic
+                groups of India.
+            </p>
+
+            <br>
+            <p class="subtitle">
+                Concluding thoughts
+            </p>
+
+            <br>
+            <p class="bodytext">
+
+            </p>
+
+
+        </div>
+    </div>
+</body>
+
+</html>
