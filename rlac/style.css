@@ -139,3 +139,45 @@ img{
 {
     font-size: inherit;
 }
+
+.cards
+{
+    display:flex;
+    justify-content: left;
+}
+
+.cardelement
+{
+    padding: 1.3em; 
+    margin: 0.5em;
+    background-color: white;
+    max-width: 20vw;
+}
+
+.cardtitle
+{
+    font-family: "glacial_indifferencebold", sans-serif;
+    font-size: 2em;
+    color: black;
+    margin: auto;
+}
+
+.cardbody
+{
+    font-family: 'Assistant', sans-serif;
+    font-size: 1.3em;
+    color: black;
+    margin: auto;
+    text-align: justify;
+}
+
+.cardbody>a
+{
+    color: black;
+    text-decoration: underline;
+}
+
+.cardbody>a:hover
+{
+    color: lightcoral;
+}

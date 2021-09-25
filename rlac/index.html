@@ -1,39 +1,64 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="../fonts/gi/stylesheet.css">
-        <script src="jquery-3.6.0.min.js"></script>
-        <link rel="shortcut icon" type="image/jpg" href="favicon.png"/>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300&display=swap" rel="stylesheet"> 
-        <meta charset="UTF-8">
-    </head>
-    <body>
-        <div id="content">
-            <div id="header">
-                <p class="title">Juan's RLAC Notes</p>
-                <div id="navbar">
-                    <p class="element"><a href="index.html">home</a></p>
-                    
-                    <div class="dropdown">
-                        <div>
-                            <p class="element">reading responses</p>
-                        </div>
-                        <div class="dropdown-content">
-                            <p class="element"><a href="response1.html">response 1</a></p>
-                        </div>                    
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../fonts/gi/stylesheet.css">
+    <script src="jquery-3.6.0.min.js"></script>
+    <link rel="shortcut icon" type="image/jpg" href="favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <div id="content">
+        <div id="header">
+            <p class="title">Juan's RLAC Notes</p>
+            <div id="navbar">
+                <p class="element"><a href="index.html">home</a></p>
+
+                <div class="dropdown">
+                    <div>
+                        <p class="element">reading responses</p>
                     </div>
-                    <p class="element"><a href="assignments.html">assignments</a></p>
-                    <p class="element"><a href="http://juandapl.github.io">juan's page</a></p>
+                    <div class="dropdown-content">
+                        <p class="element"><a href="response1.html">response 1</a></p>
+                    </div>
                 </div>
-                <hr>
+                <p class="element"><a href="assignments.html">assignments</a></p>
+                <p class="element"><a href="http://juandapl.github.io">juan's page</a></p>
             </div>
-            <div id="body">
-                <p class="bodytext">Response 1 is <a href="response1.html">here.</a> It is ready for grading.</p>
-            </div>
+            <hr>
         </div>
-    </body>
+        <div id="body">
+            <div class="cards">
+                <div class="cardelement">
+                    <p class="cardtitle">
+                        Response 1
+                    </p>
+                    <p class="cardbody">
+                        on using AntConc to analyse a corpus of South Asian literature <u>(ready for grading)</u>
+
+                        <br>
+                        <a href="response1.html">read here >></a>
+                    </p>
+                </div>
+                <div class="cardelement">
+                    <p class="cardtitle">
+                        Response 2
+                    </p>
+                    <p class="cardbody">
+                        on knowing everything there is to know about relaxation using a corpus of open-source journal
+                        articles and AntConc
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
 </html>
