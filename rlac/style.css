@@ -181,3 +181,54 @@ img{
 {
     color: lightcoral;
 }
+
+#pain
+{
+    background-color: lightcoral;    
+    flex-grow: 3;
+    max-width: none;
+}
+
+#music
+{
+    background-color: lightblue;
+    flex-grow: 2;
+    max-width: none;
+}
+
+
+
+#asmr
+{
+    background-color: lightsalmon;
+    flex-grow: 1;    
+    max-width: none;
+}
+
+.lb
+{
+    background-color: lightblue;
+    max-width: none;
+    flex-grow: 2;
+}
+
+.db
+{
+    background-color: cornflowerblue; 
+    max-width: none;
+    flex-grow: 2;
+}
+
+.lc
+{
+    background-color: lightcoral; 
+    max-width: none;
+    flex-grow: 2;
+}
+
+.ls
+{
+    background-color: lightsalmon;
+    max-width: none;
+    flex-grow: 2;
+}

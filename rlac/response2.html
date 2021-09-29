@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../fonts/gi/stylesheet.css">
+    <script src="jquery-3.6.0.min.js"></script>
+    <link rel="shortcut icon" type="image/jpg" href="favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <div id="content">
+        <div id="header">
+            <p class="title">Juan's RLAC Notes</p>
+            <div id="navbar">
+                <p class="element"><a href="index.html">home</a></p>
+
+                <div class="dropdown">
+                    <div>
+                        <p class="element">reading responses</p>
+                    </div>
+                    <div class="dropdown-content">
+                        <p class="element"><a href="response1.html">response 1</a></p>
+                        <p class="element"><a href="response2.html">response 2</a></p>
+                    </div>
+                </div>
+                <p class="element"><a href="assignments.html">assignments</a></p>
+                <p class="element"><a href="http://juandapl.github.io">juan's page</a></p>
+            </div>
+            <hr>
+        </div>
+        <div id="body">
+            <p class="bodytext">
+                Literature review is a pain for everyone. At least, that is what I would like to think when I have to
+                make
+                myself aware of all there is to know about a very specific area of knowledge I, as the result of a
+                combination of chance and bad planning, find myself in the unenviable task of writing an
+                essay on. It is, in general, a very stressful task. Having this in mind, <a
+                    href="https://sites.google.com/nyu.edu/rlac-fall21-sa">Sarah</a> and I used <a
+                    href="https://www.laurenceanthony.net/software/antcorgen/">AntCorGen</a>
+                to build a corpus of 111 articles from the <a
+                    href="https://journals.plos.org/plosone/static/publish">PLOS
+                    ONE database</a> and review literature on the
+                exact opposite feeling: studies about relaxation psychology. With this corpus in hand, we then
+                experimented
+                with word frequency analysis to extract as much information as possible from this field <a
+                    href="https://en.wikipedia.org/wiki/Laziness">without actually
+                    having to read any of the articles</a>.
+            </p>
+
+            <div class="imgcontainer">
+                <div class="imgcell">
+                    <img src="assets/med.jpg">
+                </div>
+
+            </div>
+            <p class="bodytext description">
+                A person who is not doing a literature review. Photo by <a href="https://unsplash.com/@heftiba?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Toa Heftiba</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+            </p>
+
+            <br>
+            <p class="bodytext">
+                The first thing to do when analysing a new corpus is to take a look at the aggregated word counts. After
+                filtering through commonly used words using <a href="https://gist.github.com/sebleier/554280">this
+                    stoplist</a>, and ignoring other common words in
+                scientific papers, we find some interesting occurrences among the top words:
+            </p>
+
+            <div class="imgcontainer">
+                <div>
+                    <p class="ranking1">
+                        6. music <br>
+                        10. relaxation <br>
+                        24. emotions <br>
+                        28. pain <br>
+                        29. stress <br>
+                        30. anxiety <br>
+                        38. intervention <br>
+                        77. meditation <br>
+                        133. questionnaire <br>
+                        202. asmr <br>
+                    </p>
+                </div>
+                <div>
+                    <p class="ranking2">
+                        1532 <br>
+                        1454 <br>
+                        1163<br>
+                        1117<br>
+                        1107<br>
+                        1152<br>
+                        1006<br>
+                        676<br>
+                        452<br>
+                        336
+                    </p>
+                </div>
+            </div>
+            <p class="bodytext description">
+                A selection of interesting words from the top frequencies of the corpus.
+            </p>
+
+            <br>
+            <p class="bodytext">
+                We can infer the most popular lines of research in relaxation studies from this list: we can hypothesise
+                that most studies on relaxation will either deal with the use of music (#6), or interventions (#38) for
+                the relief of pain, stress, and anxiety (#28-29-30), or the use of techniques like meditation (#77) and
+                ASMR (#202) to reduce stress levels. As for the methods used, questionnaires (#133) are highlighted as a
+                common research practice.
+            </p>
+
+            <br>
+            <p class="bodytext">
+                In order to see if these high-frequency words are really a trend in relaxation studies or only heavily
+                used in one article, we use AntConc’s concordance plot function. In this specific case, we aren’t really
+                looking for high density areas in the corpus for these words, but rather for the percentage of papers in
+                which they are mentioned.
+            </p>
+
+            <div style="margin: 1.4em; justify-content: space-between;"class="cards">
+        
+                <div class="cardelement" id="music">
+                    <p class="cardbody">
+                    "music" 26%
+                    </p>
+                </div>
+                <div class="cardelement" id="pain">
+                    <p class="cardbody">
+                    "pain" is mentioned in 38% of the articles
+                    </p>
+                </div>
+                
+                <div class="cardelement" id="asmr">
+                    <p class="cardbody">
+                    "asmr" &lt; 1%
+                    </p>
+                </div>
+            </div>
+
+            <br>
+            <p class="bodytext">
+                With this knowledge, we can be a bit more precise about our hypothesis: we can see that as ASMR is only
+                present in one of the articles, it does not represent a popular field of study within relaxation
+                psychology. We can also see that “music”, although the sixth most frequently used word in the corpus,
+                only appears in 26% of the articles, possibly meaning that it is not a technique central to all studies
+                about relaxation, but is the centre of discussion in a branch of the corpus. The same could be said
+                about “pain”: although its appearances in the corpus are better-distributed than those of “music”.
+            </p>
+
+            <div style="margin: 1.4em; justify-content: space-between;"class="cards">
+                
+                <div class="cardelement lb">
+                    <p class="cardbody">
+                    "stress" 69%
+                    </p>
+                </div>
+                <div class="cardelement db">
+                    <p class="cardbody">
+                    "anxiety" 68%
+                    </p>
+                </div>
+                <div class="cardelement lc">
+                    <p class="cardbody">
+                    intervention 47%
+                    </p>
+                </div>
+                <div class="cardelement ls">
+                    <p class="cardbody">
+                    questionnaire 66%
+                    </p>
+                </div>
+            </div>
+
+            <br>
+            <p class="bodytext">
+                “stress”, “anxiety”, and “intervention”, being well-distributed but less frequent words, could be
+                thought of as topics that are common throughout the study of relaxation psychology but don’t constitute
+                lines of inquiry on their own. The same could be said about “questionnaire”: we can infer from its
+                presence in 66% of the articles that it is one of the preferred methods to gather data in this
+                discipline.
+            </p>
+
+            <br>
+            <p class="bodytext">
+                Now that we know that “pain” and “music” are major lines of inquiry in this field, we can know more
+                about the kind of research that is being done within these areas by analysing the clusters in which
+                these words are present.
+
+            </p>
+
+            <div class="imgcontainer">
+                <div>
+                    <p class="ranking1">
+                        21. music style<br>
+                        25. music genre<br>
+                        27. music as a sleep aid
+                    </p>
+
+                    <p class="bodytext description">
+                        Interesting top clusters where "music" is the leftmost word
+                    </p>
+                </div>
+                <div>
+                    <p class="ranking2">
+                        8. tempo music<br>
+                        14. classical music<br>
+                        19. fast-tempo music<br>
+                        24. arousing music<br>
+                        37. slow-tempo music
+                    </p>
+                    <p class="bodytext description">
+                        Interesting top clusters where "music" is the rightmost word
+                    </p>
+                </div>
+            </div>
+
+            <br>
+            <p class="bodytext">
+                From the top clusters containing “music” in the corpus we can infer that there are a set of variables
+                that are controlled during the study of relaxing music: there seems to be research on whether tempo
+                (“fast-tempo” or “slow-tempo”), style (“genre”, “classical”), or other subjective characteristics
+                (“arousing”) have an impact on the effectiveness of music for relaxation. According to our cluster list,
+                one of the benchmarks used to measure relaxation appears to be its use as a sleep aid (#27).
+
+            </p>
+
+            <div class="imgcontainer">
+                <div>
+                    <p class="ranking1">
+                        4. back pain<br>
+                        7. labor pain<br>
+                        8. neck pain
+                    </p>
+                    <p class="bodytext description">
+                        Interesting top clusters where "pain" is the leftmost word
+                    </p>
+                </div>
+                <div>
+                    <p class="ranking2">
+                        1. pain intensity<br>
+                        3. pain tolerance<br>
+                        5. pain score*
+                    </p>
+                    <p class="bodytext description">
+                        Interesting top clusters where "pain" is the rightmost word
+                    </p>
+                </div>
+            </div>
+
+            <br>
+            <p class="bodytext">
+                Meanwhile, we can see that pain in the studies is usually classified by body part (“back”, “neck”),
+                cause (“labor”), and there seems to be a branch of studies dedicated to measuring and quantifying pain
+                (“intensity”, “tolerance”, “score”), which we can suppose are part of relaxation psychology in order to
+                provide a method of measuring the effectiveness of relaxation techniques.
+            </p>
+
+            <p class="ranking2">
+                Concluding thoughts
+            </p>
+
+            <br>
+            <p class="bodytext">
+                By looking at different perspectives on word counts and collocates, we were able to infer what the main
+                lines of inquiry in relaxation psychology are, the variables these studies take into account, and some
+                of the methods they use to achieve their results. This kind of surface reading served as a kind of
+                overview of the knowledge currently available on this area, and similar methods could be applied (of
+                course, with more rigour) to do broad literature reviews for specific fields. However, this has its
+                limitations: for example, scientific databases are often paywalled and often open-source ones might not
+                have a representative sample of the breadth of a field, making it more difficult to confidently infer
+                conclusions than with say, a limited corpus of an author’s works or online content such as fanfiction or
+                social media posts.
+
+            </p>
+
+            <br>
+            <p class="ranking2">
+                ready for grading - september 30th, 2021
+            </p>
+
+
+        </div>
+    </div>
+</body>
+
+</html>
