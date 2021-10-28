@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="ass1plots.css">
+    <link rel="stylesheet" href="../fonts/gi/stylesheet.css">
+    <script src="jquery-3.6.0.min.js"></script>
+    <link rel="shortcut icon" type="image/jpg" href="favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <div id="content">
+        <div id="header">
+            <p class="title">Juan's RLAC Notes</p>
+            <div id="navbar">
+                <p class="element"><a href="index.html">home</a></p>
+
+                <div class="dropdown">
+                    <div>
+                        <p class="element">reading responses</p>
+                    </div>
+                    <div class="dropdown-content">
+                        <p class="element"><a href="response1.html">response 1</a></p>
+                        <p class="element"><a href="response2.html">response 2</a></p>
+                    </div>
+                </div>
+                <p class="element"><a href="assignments.html">assignments</a></p>
+                <p class="element"><a href="http://juandapl.github.io">juan's page</a></p>
+            </div>
+            <hr>
+        </div>
+        <div id="body">
+            <p class="title">On Gender, Aliens, and their Sentiments</p>
+            <p class="ranking2">
+                written with Aryamaan Dholakia
+            </p>
+            <p class="bodytext">
+                In this piece, we analyse the differences between the choices made in two sets of works of science
+                fiction set in similar contexts from two different authors. We ask ourselves whether the differences in
+                the personal circumstances of our authors is reflected in how they reinterpret the core concept that
+                spans their works, and whether such a conclusion can even be reached by looking at limited variables
+                such as their gender and their historical period.
+            </p>
+
+            <div class="imgcontainer">
+                <div class="imgcell">
+                    <img src="assets/lb.JPG">
+                </div>
+                <div class="imgcell">
+                    <img src="assets/rc.jpg">
+                </div>
+
+            </div>
+            <p class="bodytext description">
+                Leigh Brackett (l) and Ray Cummings (r)
+            </p>
+
+            <br>
+            <p class="bodytext">
+                We chose the common topic of the encounter between humans and aliens in the books Enchantress of Venus
+                (1949) and Black Amazon of Mars (1951), from female writer Leigh Brackett, and compared them to Brigands
+                of the Moon (1931) and War Nymphs of Venus (1941), from male writer Ray Cummings. A <a
+                    href="https://en.wikipedia.org/wiki/Enchantress_of_Venus">surface</a> <a
+                    href="https://www.goodreads.com/book/show/13402303-black-amazon-of-mars">reading</a> of
+                the <a href="https://www.fadedpage.com/showbook.php?pid=20150326">synopsis</a> of <a
+                    href="https://www.barnesandnoble.com/w/the-war-nymphs-of-venus-ray-cummings/1137174653">the
+                    books</a> lets us infer that they share the common motif of human explorers
+                finding
+                themselves outside of Earth battling groups of aliens, however, given
+                the different gender identities of
+                the authors and the almost twenty-year difference between their works,
+                we can hypothesize that the way
+                they characterise their heroes, and their violent encounters with
+                extraterrestrials differs similarly.
+            </p>
+
+            <br>
+            <p class="bodytext">
+                To explore this, we looked into how the books’ characters are gendered and what qualities are usually
+                associated with these genders in both authors, and we performed sentiment analysis with the intent of
+                having a sense of the development of the plot and try to establish whether it is significantly different
+                between the authors. From this initial exploration, we decided to delve deeper into the authors’
+                descriptions of war and the differences in their word usage.
+            </p>
+
+            <!-- PART I GENDER -->
+            <br>
+            <p class="bodytext">
+
+            </p>
+
+            <br>
+            <p class="bodytext">
+
+            </p>
+
+            <!-- PART II PLOT -->
+            <br>
+            <p class="bodytext">
+                We then performed two kinds of sentiment analysis on the corpus in order to make some inferences about
+                the plot development of each of the books. We first used the <a
+                    href="http://www2.imm.dtu.dk/pubdb/pubs/6010-full.html">afinn</a> lexicon to assign a sentiment
+                        score ranging from -5 (very negative), to 5 (very positive) and added these scores across
+                        100-line
+                        sectors of each one of the books. The results can be seen in this plot:
+            </p>
+            <br>
+
+            <iframe id="plot1" src="assets/p3.html"></iframe>
+            <p class="bodytext description">
+                Plot of sentiment score (positive-negative) per sector of the books. [This is an interactive graph. Hover over it to see the values.]
+            </p>
+
+            <br>
+            <p class="bodytext">
+                We can observe that all of the plots show an overwhelming concentration of negative words throughout
+                their length, which to us might be a consequence of the high frequency of words used to describe the
+                violent encounters between humans and aliens, and that words describing combat are ranked negatively in
+                the afinn lexicon. However, we can notice that all the books seem to be organised in a series of
+                negative spikes, which we think can mean that the books are composed of many short but rapidly
+                intensifying violent segments. As we didn’t find any clear differences between the two authors, we
+                decided to use the <a href="https://saifmohammad.com/WebPages/NRC-Emotion-Lexicon.htm">nrc</a> lexicon to
+                        pair every word in our corpus with an emotion (anger,
+                        anticipation, disgust, fear, joy, sadness, surprise, trust) and count these emotions per
+                        100-line
+                        sectors in order to obtain a plot summary in terms of emotions.
+
+            </p>
+
+            <br>
+            <div id="wrap">
+            <iframe class="streamgraph" src="assets/sg1.html">
+            </iframe>   
+            </div>
+            <br>
+            <div id="wrap">
+                <iframe class="streamgraph" src="assets/sg2.html">
+                </iframe>   
+            </div>
+
+            <p class="bodytext description">
+                Number of words per sentiment across 100-line sectors of "Brigands of the Moon" (above) and "War Nymphs of Venus" (below) by Ray Cummings. <br> [This is an interactive graph. Hover over it to see the values.]
+            </p>
+
+
+            <br>
+            <p class="bodytext">
+                Using this visualisation, we can try to confirm our suspicions about the nature of the negative words in
+                the corpus. In Cummings, words relating to “disgust”, “joy”, and “surprise” are not common, instead
+                being words related to “fear” the most frequent throughout the length of the books. We can identify
+                again the spikes in conflict in the books through increased frequencies of words related to “anger”,
+                “anticipation”, and “sadness” and the lulls between these spikes through larger amounts of “trust”
+                words.
+
+            </p>
+
+            <div id="wrap">
+                <iframe class="streamgraph" src="assets/sg3.html">
+                </iframe>   
+                </div>
+                <br>
+                <div id="wrap">
+                    <iframe class="streamgraph" src="assets/sg4.html">
+                    </iframe>   
+                </div>
+    
+                <p class="bodytext description">
+                    Number of words per sentiment across 100-line sectors of "Black Amazon of Mars" (above) and "Enchantress of Venus" (below) by Leigh Brackett. <br> [This is an interactive graph. Hover over it to see the values.]
+                </p>
+
+
+
+            <br>
+            <p class="bodytext">
+                In Brackett, similarly, “fear” is a prevalent sentiment in both books, and “joy”, “surprise”, and
+                “disgust” are, too, rather infrequent. However, the spikes in conflict are represented only by an
+                increase in “anger” and “sadness”, not “anticipation”, and words related to “trust” have a seemingly
+                constant frequency throughout the books.
+            </p>
+            <br>
+            <p class="bodytext">
+                We can first observe that “trust” is constant in Brackett, while only appearing outside of conflict in
+                Cummings. We could infer that in Brackett there is a partnership in combat between multiple characters,
+                which can explain why “trust” appears even in the violent spikes of her books, while, on the contrary,
+                we could infer that Cummings prefers to place a lone “hero” character in violent sections of his books,
+                given the lack of words pertaining to “trust” during the peaks in “anticipation” and “anger”. Another
+                difference is the lack of words related to “anticipation” in Brackett’s peaks of “anger” compared to
+                Cummings’, which could mean a difference in how they portray conflict.
+            </p>
+            <br>
+            <p class="bodytext">
+                Our last observation is about the endings of the works. Given that not all words are counted as
+                pertaining to an emotion by the nrc lexicon, we can assume that the thicker parts of our streamgraphs
+                correspond to sectors of the story with a larger emotional load. We can notice that Cummings’ endings
+                are noticeably more emotionally charged than the rest of the books, while Brackett’s books end in levels
+                of emotion similar to the other parts. We could infer from this that Cummings prefers grand endings,
+                while the climax of Brackett’s books happens slightly before the ending.
+            </p>
+
+            <!-- Part III WAR -->
+
+
+            <div class="imgcontainer">
+                <div>
+                    <p class="ranking1">
+
+                    </p>
+                </div>
+                <div>
+                    <p class="ranking2">
+
+                    </p>
+                </div>
+            </div>
+            <p class="bodytext description">
+
+            </p>
+
+            <br>
+
+
+            <div style="margin: 1.4em; justify-content: space-between;" class="cards">
+
+                <div class="cardelement" id="music">
+                    <p class="cardbody">
+                        "music" 26%
+                    </p>
+                </div>
+                <div class="cardelement" id="pain">
+                    <p class="cardbody">
+                        "pain" is mentioned in 38% of the articles
+                    </p>
+                </div>
+
+                <div class="cardelement" id="asmr">
+                    <p class="cardbody">
+                        "asmr" &lt; 1%
+                    </p>
+                </div>
+            </div>
+
+
+
+            <br>
+            <p class="ranking2">
+                not ready yet
+            </p>
+
+
+        </div>
+    </div>
+</body>
+
+</html>
