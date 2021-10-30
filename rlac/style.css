@@ -232,3 +232,8 @@ img{
     max-width: none;
     flex-grow: 2;
 }
+
+.mini
+{
+    height: 30vh;
+}
