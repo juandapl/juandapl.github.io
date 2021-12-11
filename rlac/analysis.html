@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="ass1plots.css">
+    <link rel="stylesheet" href="../fonts/gi/stylesheet.css">
+    <script src="jquery-3.6.0.min.js"></script>
+    <link rel="shortcut icon" type="image/jpg" href="favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;300&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <div id="content">
+        <div id="header">
+            <p class="title">Juan's RLAC Notes</p>
+            <div id="navbar">
+                <p class="element"><a href="index.html">home</a></p>
+
+                <div class="dropdown">
+                    <div>
+                        <p class="element">reading responses</p>
+                    </div>
+                    <div class="dropdown-content">
+                        <p class="element"><a href="response1.html">response 1</a></p>
+                        <p class="element"><a href="response2.html">response 2</a></p>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <div>
+                        <p class="element">assignments</p>
+                    </div>
+                    <div class="dropdown-content">
+                        <p class="element"><a href="assignment1.html">assignment 1</a></p>
+                        <p class="element"><a href="assignment2.html">assignment 2</a></p>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <div>
+                        <p class="element">final project</p>
+                    </div>
+                    <div class="dropdown-content">
+                        <p class="element"><a href="projectplan.html">project plan</a></p>
+                        <p class="element"><a href="dorian.html">preview</a></p>
+                        <p class="element"><a href="stt.html">speech-to-text reflection</a></p>
+                        <p class="element"><a href="analysis.html">analysis</a></p>
+                        <p class="element"><a href="reflection.html">reflective essay</a></p>
+                    </div>
+                </div>
+                <p class="element"><a href="http://juandapl.github.io">juan's page</a></p>
+            </div>
+            <hr>
+        </div>
+        <div id="body">
+            <p class="title">On Joy, and other emotions, and where to find them in Rooftop Rhythms</p>
+            <p class="ranking2">
+                written with Aryamaan Dholakia
+            </p>
+            <p class="bodytext">
+                This final project examines Rooftop Rhythms, the Middle East’s home-grown open mic and slam poetry event. After obtaining computer-generated transcripts of the last 14 instalments of the event, we used different distant reading techniques in order to identify how the different sentiments conveyed in the event’s performances have varied throughout the last two years, marked by the transition to online performances and the COVID pandemic. Noticing the variability in the different sentiments across time, we decided to use topic modelling to obtain groups of words that co-occur throughout the episodes, and attempt to establish whether there are groups of words that in Rooftop Rhythms are associated with a certain emotion.
+            </p>
+
+            <br>
+            <p class="bodytext">
+                The first step in our analysis was to take the Rooftop Rhythms transcripts and associate them with different emotions using sentiment analysis. We chose to focus on the emotions of sadness, joy, fear, and anger. Our aim here was to see if some of these emotions varied concurrently and what that could mean in the context of the shows. In order to do this, we performed a sentiment analysis by matching the emotions in the ‘nrc’ [link] lexicon to the transcript and counting the ratio of words related to each of the emotions per episode. The result was this graph:  
+            </p>
+
+            <!-- IMAGE 1 - Sentiment Graph -->
+            <div class="imgcontainer">
+                <div class="imgcell">
+                    <img src="FP/1.png">
+                </div>
+            </div>
+            <p class="bodytext description">
+                <span style="color:lightyellow">Joy 
+                    <span style="color:green">Fear 
+                        <span style="color:cornflowerblue">Sadness 
+                            <span style="color:coral">Anger
+            </p>
+
+            <br>
+            <p class="bodytext">
+                Our first observation is that regardless of variability, joy can be said to be the most prevalent emotion in Rooftop Rhythms, followed by fear, sadness, and anger. The COVID pandemic, which started in episode 4 of our corpus, did little to affect this order. However, the first four episodes (5-8) of the online Rooftop Rhythms era showed higher levels of fear, anger, and sadness, arguably as a response to the uncertainty and anxiety caused by the first stage of the pandemic. However, following episode 8, there is a steady decrease in anger, fear and sadness - though the times warranted it - while joy maintained its high ratio. This observation speaks volumes about the character of the Rooftop Rhythms community and the resilience it showed during the online phase of the series.
+            </p>
+
+            <br>
+            <p class="bodytext">
+                However, in a less than exciting observation, we could notice that there was no clear covariance relationship between any pair of sentiments across the Rooftop Rhythms episodes. Rather, the amounts for all emotions seem to vary concurrently: this might be, instead, an indicator of the ratio of poetry to “filler” of the performances if we assume that a performance has a higher ratio of emotions than, for instance, an introduction or a speech. 
+            </p>
+
+            <br>
+            <p class="bodytext">
+                A more interesting explanation is also possible: that these variations are an indicator of the quality of the transcription. In the previous section [link], we have discussed how speech to text algorithms often struggle with slam poetry due to its high cadence, diversity of speakers, and use of colloquial language. If we assume that words related to emotions are mainly concentrated in the performances, we can conclude based on the similar variance of all emotions throughout the corpus that these amounts are related to how much of the performances was captured accurately by the algorithm, rather than the content of the show itself.
+            </p>
+
+            <br>
+            <p class="bodytext">
+                In an attempt to unearth more from our sentiment analysis, we decided to run a topic model of the transcripts. The topic model returned us 20 groups of words that occur close to each other in the series, and the relative importance of each per episode. Our intention behind this was to explore whether any of these groups were strongly related to the emotions we looked at previously. The result was this heatmap:
+            </p>
+
+            <!-- Image 2 Heatmap -->
+            <div class="imgcontainer">
+                <div class="imgcell" style="height: auto;">
+                    <img src="FP/2.png">
+                </div>
+            </div>
+            <p class="bodytext description">
+                The more intense the colour, the more significant the group of words is in the episode. 
+            </p>
+
+            <br>
+            <p class="bodytext">
+                This might look messy, but fear not. The first step in attempting to link this heatmap to the emotions in our corpus is to filter some of the topics. For example, we can safely assume that topics which are dominant in one episode but don’t appear at all in others are not generally related to one of the emotions, but rather refer to something specific that happened in that episode. 
+            </p>
+
+
+            <br>
+            <p class="bodytext">
+                However, there are still some interesting observations to be made about these topics: For instance, although the pandemic began between episodes 2-4, there was an increase in joy and a decrease in all other emotions. We can explain this through our topic model. The most important groups of words in these episodes were as follows:
+            </p>
+            <!-- Ranking 1 Ep 2, 3, 4 and topics -->
+
+            <div class="imgcontainer">
+                <div class="imgcell" >
+                    <img src="FP/3.png" style="max-width: 75vw;">
+                </div>
+            </div>
+            <p class="ranking1">
+                1. haiku, death, wins, clapping, colour...
+            </p>
+            <p class="ranking1">
+                2. health, planet, aware, collaboration, mask...
+            </p>
+            <p class="ranking1">
+                3. congratulation, anniversary, community, country...
+            </p>
+
+            <br>
+            <p class="bodytext">
+                This shows that positive words are central to Rooftop Rhythms performances regardless of the context. Moreover, we can also see the increase of joy in these episodes to a topic that we later relate to this emotion: “love,” “life,” “live” and “hope” (and “nyu”). This topic increases drastically from episode 2 to 4, conveying how Rooftop Rhythms remained an uplifting space in uncertain times.
+            </p>
+
+
+            <br>
+            <p class="bodytext">
+                However, the increase of joy in the first episodes of the pandemic could also be a sign of denial: although episode 4 was the first online episode and took place when the pandemic was already impacting the world, the topic containing “pandemic” and “virus” themselves was most strongly associated with episode 7, recorded on September 2020. With people becoming more accustomed to the situation and finally coming out of lockdowns, the usage of words like these may have become normalized.
+            </p>
+
+            <!-- Graph - pandemic used only on episode 7  -->
+            <div class="imgcontainer">
+                <div class="imgcell" style="height: min-content;">
+                    <img src="FP/4.png" style="max-width: 75vw;">
+                </div>
+            </div>
+            <p class="ranking1">
+                topic: pandemic, bottom, virus, math, social, good, media...
+            </p>
+
+            <br>
+            <p class="bodytext">
+                After these observations, we discarded all the topics that were concentrated in one episode, leaving us with five sets of words which appeared consistently across the corpus. The final step of our analysis from here was to see if the small variances between episodes in these sets were similar to those of any of the emotions. 
+            </p>
+
+            <!-- all sets selected -->
+            <div class="imgcontainer">
+                <div class="imgcell">
+                    <img src="FP/5.png" style="max-width: 75vw;">
+                </div>
+            </div>
+            <p class="bodytext description">
+                The five sets with consistent frequency throughout the series. Notice how the heatmap is more populated.
+            </p>
+            <!-- Set 1 and frequencies -->
+
+            <p class="ranking1">
+                Topic 1: coming, speak, ready, writing, light, i'll, we'll...
+            </p>
+
+            <br>
+            <p class="bodytext">
+                The first set consisted of words which could all be used at the beginning of each performance when welcoming a new speaker or poet on stage. As a result, this topic doesn’t relate to any particular emotion, but is rather used as a convention across the episodes.
+            </p>
+
+            <!-- Set 2/3 unexpected words highlighted and topics graph -->
+            <p class="ranking1">
+                Topic 2: good, give, <span class="ranking2">center</span>, amazing, <span class="ranking2">bill</span>, we're, <span class="ranking2">mike</span>, things....
+            </p>
+            <p class="ranking1">
+                Topic 3: poem, <span class="ranking2">abu, dhabi,</span> beautiful, art, family, poet, excited, <span class="ranking2">rhythms</span>...
+            </p>
+
+            <br>
+            <p class="bodytext">
+                The next two sets included words that are probably included in the ‘nrc’ lexicon we used before under the ‘joy’ category, which unsurprisingly makes these topics prevalent throughout the corpus. We could hypothesise that these topics are common when thanking or complimenting a performer, or in the introductions to the performances. However, we can see other words that aren’t part of ‘nrc’: ‘Bill’, ‘Mike’, ‘Art’, ‘Center’, ‘Abu Dhabi’. From this, we could infer that the introductions to the performances (where the NYU Abu Dhabi Arts Center is mentioned) are usually joyful, and that the words said by ‘Bill’ and ‘Mike’ generate joy in the audience.
+            </p>
+
+            <!-- Topic 4 and Graph -->
+            <p class="ranking1">
+                Topic 4: home, years, big, season, stage, leave, mother, music...
+            </p>
+
+            <br>
+            <p class="bodytext">
+                The next topic doesn’t seem to follow the tendency of any group of emotions throughout the series. However, we can infer from the fact that this topic was less frequent during the early phase of the pandemic (episodes 3-7) l that words such as "world", "home", and "mother" would be less frequent in a scenario where performers are in their home countries, and the topics of longing, travel, and family are not as prevalent. As well, "stage" and "music" would be less frequent in an online format. We can relate this topic, then, not to a single emotion but to the changes travel restrictions made to the subjects of the performances.
+            </p>
+
+            <!-- [Topic 5 and Joy Graph] -->
+            <p class="ranking1">
+                Topic 5: <span class="ranking2">i'm</span>, love, <span class="ranking2">you're</span>, <span class="ranking2">show</span>, life, <span class="ranking2">he's</span>, live, <span class="ranking2">she's</span>, hope, <span class="ranking2">nyu</span>, <span class="ranking2">rooftop</span>, heart...
+            </p>
+
+
+            <br>
+            <p class="bodytext">
+                The last topic yielded the most surprising results. It was amongst the most significant topics for all episodes, and this led us to suspect it was related to joy. On a closer reading of the topic members, we find words present in the original lexicon for joy such as “love”, “life”, and “hope”, however, we find many pronouns (“he”, “she”, “you”, “I”) and references to the show itself (“rooftop”, “show”). From this, we can conclude that Rooftop Rhythms is overwhelmingly positive when it comes to talking about people as the group of words most closely related to joy is that of the personal pronouns.
+            </p>
+
+            <br>
+            <p class="bodytext">
+                The change of emotions observed in our sentiment analysis leads to several interesting insights, but, most importantly, joy remains the most prominent emotion throughout all the episodes. Joy is found in the references performers make to themselves and others, how they are presented by the hosts of the show, and how the show refers to itself. Even if the counts of emotions we obtained varied concurrently and could have been affected by the fidelity of the transcription, what we can see from their relative frequencies is, as Dorian (founder of Rooftop Rhythms) also hypothesised, “a sort of universality” - regardless of the pandemic’s effects on the subject of the performances, the overall distribution of emotions is similar, which speaks highly of the resilience of the show during the past two years.
+            </p>
+
+            <br>
+            <p class="bodytext">
+                Although the STT transcription we worked with is not ideal, and we could have extracted only the content of the performances using different methods we believe that, through topic modelling and sentiment analysis, we have uncovered several important and interesting insights about Rooftop Rhythms; from the changing perspectives and emotions of individuals, to the main themes and topics that Rooftop Rhythms talks about and how it has become a symbol of happiness, joy, and hope for its community, especially during the pandemic era.
+            </p>            
+            <br>
+            <p class="bodytext smaller">
+                <a href="FP/final.nb.html">See the R notebook for this assignment.</a><br>
+            </p>
+
+            <br>
+            <p class="ranking2">
+               ready for grading. december 12th, 2021
+            </p>
+
+
+        </div>
+    </div>
+</body>
+
+</html>

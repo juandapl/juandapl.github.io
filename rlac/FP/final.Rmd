@@ -1,0 +1,97 @@
+---
+title: "A Sentiment Analysis of Rooftop Rhythms"
+output: html_notebook
+---
+
+```{r}
+install.packages(c("tidyverse","tidytext","pdftools","tesseract","tidyr","stringr","ggplot2"))
+install.packages("tidyr")
+install.packages("devtools")
+install.packages("textdata")
+install.packages("plotly")
+```
+
+```{r}
+library(tidyverse)
+library(pdftools)
+library(tesseract)
+library(tidyr)
+library(devtools)
+library(textdata)
+library(tidytext)
+library(dplyr)
+library(stringr)
+library(ggplot2)
+library(plotly)
+```
+
+```{r}
+episodes <- 1:14
+episodes <- as.character(episodes)
+
+all_episodes <- data.frame(anger = integer(),
+                           anticipation = integer(),
+                           disgust = integer(),
+                           fear = integer(),
+                           joy = integer(),
+                           sadness = integer(),
+                           surprise = integer(),
+                           trust = integer())
+
+nwords <- vector()
+
+
+for(ep in episodes)
+{
+  txt = 0
+  txt <- read_file(paste("C:\\Users\\juand\\Downloads\\sequential-20211116T115107Z-001\\sequential\\", ep, ".txt",sep =""))
+
+  txt_sentences <- tibble(text = txt) %>% 
+  unnest_tokens(sentence, text, token = "sentences") 
+  
+  d = nrow(txt_sentences)
+
+  tidy_text <- txt_sentences %>% 
+  add_column(linenumber = 1:d, .before = "sentence")
+
+  tidy_text <- tidy_text %>%
+  unnest_tokens(word, sentence) 
+  
+  nwords <- append(nwords, nrow(tidy_text))
+
+  tidy_text <- tidy_text %>%
+  anti_join(stop_words)
+  
+  text_sentiment <- tidy_text %>%
+  inner_join(get_sentiments("nrc"))
+  
+  episode_sentiments <- count(text_sentiment, sentiment)
+  
+  episode_sentiments <- as.data.frame(t(episode_sentiments))
+  names(episode_sentiments) <- episode_sentiments[1, ]
+  episode_sentiments <- episode_sentiments[-1,]
+  
+  all_episodes <- rbind(all_episodes, episode_sentiments)
+  
+}
+all_episodes$episode = as.integer(episodes)
+all_episodes$words = nwords
+
+```
+
+transforming raw counts into ratio of the total number of words
+```{r}
+all_episodes$anger = as.integer(all_episodes$anger)/all_episodes$words
+all_episodes$joy = as.integer(all_episodes$joy)/all_episodes$words
+all_episodes$fear = as.integer(all_episodes$fear)/all_episodes$words
+all_episodes$sadness = as.integer(all_episodes$sadness)/all_episodes$words
+```
+
+
+Graphing RR sentiments
+```{r}
+  p <- ggplot(all_episodes, aes(x = episode, group = 1)) + geom_line(aes(y=anger), color="coral1") + geom_line(aes(y=joy), color="darkgoldenrod1") + geom_line(aes(y=fear), color ="darkgreen") + geom_line(aes(y=sadness), color="cornflowerblue") + ylab("ratio") + geom_point(aes(y=anger), color="coral1", size = 1.5) + geom_point(aes(y=joy), color="darkgoldenrod1", size = 1.5) + geom_point(aes(y=fear), color ="darkgreen", size = 1.5) + geom_point(aes(y=sadness), color="cornflowerblue", size = 1.5) + theme_bw() +
+    scale_x_continuous(breaks = seq(1, 14, 1))
+  p
+```
+joy - yellow, anger - coral, fear = green - sadness = blue
