@@ -257,12 +257,25 @@ circle:hover{
 .content{
     position: relative;
     color: white;
-    background-color: rgba(138, 43, 226, 0.9);
+    background-color: rgba(29, 10, 47, 0.9);
     padding: 1.5em;
     padding-top: 0;
-    max-width: 850px;
     max-height: 85%;
     overflow-y: auto;
+}
+
+@media screen and (max-width: 600px)
+{
+    .content{
+        max-width: 850px;
+    }
+}
+
+@media screen and (min-width: 601px)
+{
+    .content{
+        max-width: 85%;
+    }
 }
 
 p,ul,h2,span
@@ -384,6 +397,16 @@ img
     background-image: url("projectfiles/workmate.png");
 }
 
+#rlac
+{
+    background-image: url("projectfiles/rlac.png");
+}
+
+#sswb
+{
+    background-image: url("projectfiles/sswb.png");
+}
+
 /* responsible for the black filter that makes text readable in the portfolio */
 .project::after
 {
@@ -400,6 +423,9 @@ img
 .above
 {
     z-index: 9999;
+    position: relative;
+    text-align: center;
+    margin: 2em 2em;
 }
 
 .deactivated

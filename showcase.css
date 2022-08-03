@@ -1,0 +1,30 @@
+.showcase
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1em;
+}
+
+.show_item
+{
+    background-color: white;
+    width: 350px;
+    height: 250px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+/* responsible for the black filter that makes text readable in the portfolio */
+.show_item::before
+{
+    content:"";
+    background-color: black;
+    opacity: 0.7;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+}

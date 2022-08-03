@@ -163,7 +163,7 @@ $("#2020").click(
     }
 );
 
-let titles = ["juan piñeros liberato","programmer?","designer?","aspiring linguist?","too old for pro tennis?","firefighter?","math nerd?","\"most likely to win nobel prize\"?"];
+let titles = ["juan piñeros liberato","traveller?","programmer?","iron cook?","aspiring linguist?","too old for pro tennis?","math nerd?","\"most likely to win nobel prize\"?"];
 
 function changeTitle()
 {
