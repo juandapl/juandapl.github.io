@@ -407,6 +407,22 @@ img
     background-image: url("projectfiles/sswb.png");
 }
 
+#vv
+{
+    background-image: url("projectfiles/vv.png");
+}
+
+#kne
+{
+    background-image: url("projectfiles/kne.png");
+}
+
+#car
+{
+    background-image: url("projectfiles/car.png");
+}
+
+
 /* responsible for the black filter that makes text readable in the portfolio */
 .project::after
 {
