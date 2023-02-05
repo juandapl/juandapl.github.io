@@ -453,3 +453,13 @@ img
 {
     cursor: pointer;
 }
+.linky
+{
+    display: flex;
+    justify-content: space-between;
+}
+.moreinfo, .lessinfo
+{
+    background-color: blueviolet;
+    cursor: pointer;
+}

@@ -163,12 +163,26 @@ $("#2020").click(
     }
 );
 
-let titles = ["juan piñeros liberato","traveller?","programmer?","iron cook?","aspiring linguist?","too old for pro tennis?","math nerd?","\"most likely to win nobel prize\"?"];
+let titles = ["juan piñeros liberato","traveller?","programmer?","iron cook?","too old for pro tennis?","math nerd?"];
 
 function changeTitle()
 {
-    titleNumber = (titleNumber + 1) % 8;
+    titleNumber = (titleNumber + 1) % 6;
     document.title = titles[titleNumber];
 }
 
 var interval = window.setInterval(changeTitle, 1000);
+
+$(".moreinfo").click(
+    function()
+    {
+        $(this).parent().parent().parent().find(".above").toggleClass("hidden");
+    }
+);
+
+$(".lessinfo").click(
+    function()
+    {
+        $(this).parent().parent().parent().find(".above").toggleClass("hidden");
+    }
+);
