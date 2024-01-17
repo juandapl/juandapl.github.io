@@ -423,6 +423,23 @@ img
 }
 
 
+#igem {
+    background-image: url("projectfiles/hc.png");
+}
+
+#capstone {
+    background-image: url("projectfiles/camel.png");
+}
+
+#bk {
+    background-image: url("projectfiles/bkk.png");
+}
+
+#wt {
+    background-image: url("projectfiles/wt.png");
+}
+
+
 /* responsible for the black filter that makes text readable in the portfolio */
 .project::after
 {
