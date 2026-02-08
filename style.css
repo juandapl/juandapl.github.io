@@ -35,11 +35,11 @@ body {
 
 /* Jitter movement classes for SVG groups */
 .moved-up {
-    transform: translateY(-0.3em);
+    transform: translateY(-0.16em);
     transition: transform 1s ease-in-out;
 }
 
 .moved-down {
-    transform: translateY(0.3em);
+    transform: translateY(0.16em);
     transition: transform 1s ease-in-out;
 }
