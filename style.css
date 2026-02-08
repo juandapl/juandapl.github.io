@@ -2,8 +2,9 @@ body {
     background-color:   #050e39;
     color: #ffffff;
     font-family: 'Glacial Indifference', sans-serif;
-    margin: 0;
+    margin: 2em;
     padding: 0;
+    overflow: hidden;
 }
 .centered {
     display: flex;
@@ -12,6 +13,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    gap: 0em;
 }
 
 .highlight {
@@ -27,7 +29,17 @@ body {
 }
 
 .big_title {
-    font-size: 32px;
+    font-size: 2em;
     line-height: 1.15;
 }
 
+/* Jitter movement classes for SVG groups */
+.moved-up {
+    transform: translateY(-0.3em);
+    transition: transform 1s ease-in-out;
+}
+
+.moved-down {
+    transform: translateY(0.3em);
+    transition: transform 1s ease-in-out;
+}
